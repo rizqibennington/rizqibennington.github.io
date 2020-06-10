@@ -1,76 +1,140 @@
-$(document).ready(function() {
+/* =================================
+------------------------------------
+	Civic - CV Resume
+	Version: 1.0
+ ------------------------------------ 
+ ====================================*/
 
-	
-	/* Navigation burger onclick side navigation show */
-	$('.burger-container').on('click', function() {
-		$('.main-navigation').toggle('slow');
 
-		if($('#myBtn').hasClass('change')) {
-			$('body').addClass('stop-scroll');
-		} else {
-			$('body').removeClass('stop-scroll');
+
+'use strict';
+
+
+$(window).on('load', function() { 
+	/*------------------
+		Preloder
+	--------------------*/
+	$(".loader").fadeOut(); 
+	$("#preloder").delay(400).fadeOut("slow");
+
+});
+
+
+(function($) {
+
+	/*------------------
+		Background set
+	--------------------*/
+	$('.set-bg').each(function() {
+		var bg = $(this).data('setbg');
+		$(this).css('background-image', 'url(' + bg + ')');
+	});
+
+
+	$('.review-slider').owlCarousel({
+		loop: true,
+		nav: false,
+		dots: true,
+		items: 1,
+		autoplay: true
+	});
+
+
+
+	$('.progress-bar-style').each(function() {
+		var progress = $(this).data("progress");
+		var prog_width = progress + '%';
+		if (progress <= 100) {
+			$(this).append('<div class="bar-inner" style="width:' + prog_width + '"><span>' + prog_width + '</span></div>');
+		}
+		else {
+			$(this).append('<div class="bar-inner" style="width:100%"><span>' + prog_width + '</span></div>');
 		}
 	});
 
 
-	/* About me slider */
-	$('.about-me-slider').slick({
-		slidesToShow: 1,
-		prevArrow: '<span class="span-arrow slick-prev"><</span>',
-		nextArrow: '<span class="span-arrow slick-next">></span>'
-	});
-
-	/* Blog slider */
-	$('.blog-slider').slick({
-		slidesToShow: 2,
-		prevArrow: '<span class="span-arrow slick-prev"><</span>',
-		nextArrow: '<span class="span-arrow slick-next">></span>',
-		responsive: [
-		{
-			breakpoint: 768,
-			settings: {
-				slidesToShow: 1
+	$('.lan-prog').each(function() {
+		var progress = $(this).data("lanprogesss");
+		var ele      = '<span></span>';
+		var ele_fade = '<span class="fade-ele"></span>';
+		
+		for (var i = 1; i <= 5; i++) {
+			if(i <= progress){
+				$(this).append(ele);
+			} else {
+				$(this).append(ele_fade);
 			}
 		}
-		]
 	});
-	
-});
+
+
+	/*------------------
+		Popup
+	--------------------*/
+	$('.portfolio-item .port-pic').magnificPopup({
+		type: 'image',
+		mainClass: 'img-popup-warp',
+		removalDelay: 500,
+	});
 
 
 
-var counta = 0;
 
-$(window).scroll(function(e){
+if($().circleProgress){
 
+	//Set progress circle 1
+	$("#progress1").circleProgress({
+		value: 0.75,
+		size: 175,
+		thickness: 2,
+		fill: "#40424a",
+		emptyFill: "rgba(0, 0, 0, 0)"
+	});
+	//Set progress circle 2
+	$("#progress2").circleProgress({
+		value: 0.83,
+		size: 175,
+		thickness: 2,
+		fill: "#40424a",
+		emptyFill: "rgba(0, 0, 0, 0)"
+	});
 
-	/* Onscroll number counter */
-	var statisticNumbers = $('.single-count');
-	if(statisticNumbers.length) {
-		var oTop = statisticNumbers.offset().top - window.innerHeight;
-		if (counta == 0 && $(window).scrollTop() > oTop) {
-			$('.count').each(function() {
-				var $this = $(this),
-				countTo = $this.attr('data-count');
-				$({
-					countNum: $this.text()
-				}).animate({
-					countNum: countTo
-				},
+	//Set progress circle white
+	$("#progress3").circleProgress({
+		value: 0.75,
+		size: 175,
+		thickness: 2,
+		fill: "#ffffff",
+		emptyFill: "rgba(0, 0, 0, 0)"
+	});
 
-				{
-					duration: 2000,
-					easing: 'swing',
-					step: function() {
-						$this.text(Math.floor(this.countNum));
-					},
-					complete: function() {
-						$this.text(this.countNum);
-					}
-				});
-			});
-			counta = 1;
-		}
-	}
+	//Set progress circle white
+	$("#progress4").circleProgress({
+		value: 0.83,
+		size: 175,
+		thickness: 2,
+		fill: "#ffffff",
+		emptyFill: "rgba(0, 0, 0, 0)"
+	});
 
-});
+	//Set progress circle skyblue
+	$("#progress5").circleProgress({
+		value: 0.75,
+		size: 175,
+		thickness: 2,
+		fill: "#009fff",
+		emptyFill: "rgba(0, 0, 0, 0)"
+	});
+
+	//Set progress circle skyblue
+	$("#progress6").circleProgress({
+		value: 0.83,
+		size: 175,
+		thickness: 2,
+		fill: "#009fff",
+		emptyFill: "rgba(0, 0, 0, 0)"
+	});
+}
+
+})(jQuery);
+
