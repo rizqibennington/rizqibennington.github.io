@@ -156,7 +156,7 @@ const AboutSection = () => {
               </div>
               
               <motion.div
-                className="mt-6"
+                className="mt-6 flex justify-center"
                 variants={itemVariants}
               >
                 <motion.a

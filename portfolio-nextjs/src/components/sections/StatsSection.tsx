@@ -20,22 +20,22 @@ const StatsSection = () => {
   const stats = [
     {
       key: 'certifications',
-      target: 3,
+      target: 4,
       label: 'Certification',
     },
     {
       key: 'experience',
-      target: 2,
+      target: 3,
       label: 'Years Working Experience',
     },
     {
       key: 'projects',
-      target: 50,
+      target: 20,
       label: 'Projects Completed',
     },
     {
       key: 'industries',
-      target: 4,
+      target: 3,
       label: 'Industry Fields',
     },
   ];
