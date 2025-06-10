@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useEffect, useState } from 'react';
 
 const StatsSection = () => {
   const [ref, inView] = useInView({
@@ -10,56 +9,28 @@ const StatsSection = () => {
     threshold: 0.1,
   });
 
-  const [counters, setCounters] = useState({
-    certifications: 0,
-    experience: 0,
-    projects: 0,
-    industries: 0,
-  });
-
   const stats = [
     {
       key: 'certifications',
-      target: 4,
+      value: 4,
       label: 'Certification',
     },
     {
       key: 'experience',
-      target: 3,
+      value: 3,
       label: 'Years Working Experience',
     },
     {
       key: 'projects',
-      target: 20,
+      value: 20,
       label: 'Projects Completed',
     },
     {
       key: 'industries',
-      target: 3,
+      value: 3,
       label: 'Industry Fields',
     },
   ];
-
-  useEffect(() => {
-    if (inView) {
-      stats.forEach((stat) => {
-        let start = 0;
-        const end = stat.target;
-        const duration = 2000; // 2 seconds
-        const increment = end / (duration / 16); // 60fps
-
-        const timer = setInterval(() => {
-          start += increment;
-          if (start >= end) {
-            setCounters(prev => ({ ...prev, [stat.key]: end }));
-            clearInterval(timer);
-          } else {
-            setCounters(prev => ({ ...prev, [stat.key]: Math.floor(start) }));
-          }
-        }, 16);
-      });
-    }
-  }, [inView, stats]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -114,14 +85,14 @@ const StatsSection = () => {
                   className="text-4xl md:text-5xl font-bold mb-2"
                   initial={{ scale: 0 }}
                   animate={inView ? { scale: 1 } : { scale: 0 }}
-                  transition={{ 
-                    duration: 0.5, 
+                  transition={{
+                    duration: 0.5,
                     delay: index * 0.2,
                     type: "spring",
                     stiffness: 100
                   }}
                 >
-                  {counters[stat.key as keyof typeof counters]}
+                  {stat.value}
                 </motion.div>
                 
                 <motion.div
