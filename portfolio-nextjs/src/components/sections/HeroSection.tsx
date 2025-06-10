@@ -12,9 +12,9 @@ const HeroSection = () => {
   };
 
   return (
-    <section 
-      id="home-section" 
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800"
+    <section
+      id="home-section"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800 pt-16"
     >
       {/* Background overlay */}
       <div className="absolute inset-0 bg-black/30"></div>
