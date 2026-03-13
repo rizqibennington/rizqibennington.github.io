@@ -17,7 +17,8 @@ const ProjectsSection = () => {
       subtitle: 'Katadata Green',
       image: '/images/katadata-esg-index.png',
       description: 'Environmental, Social, and Governance index platform for sustainable business evaluation.',
-      link: '#'
+      link: 'https://green.katadata.co.id/dashboard/welcome',
+      openInNewTab: true
     },
     {
       title: 'Sistem Informasi Komite Etik dan Hukum Dharmais',
@@ -128,6 +129,8 @@ const ProjectsSection = () => {
                     
                     <motion.a
                       href={project.link}
+                      target={project.openInNewTab ? '_blank' : undefined}
+                      rel={project.openInNewTab ? 'noopener noreferrer' : undefined}
                       className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
@@ -152,6 +155,8 @@ const ProjectsSection = () => {
                 </p>
                 <a
                   href={project.link}
+                  target={project.openInNewTab ? '_blank' : undefined}
+                  rel={project.openInNewTab ? 'noopener noreferrer' : undefined}
                   className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm"
                 >
                   View Project
