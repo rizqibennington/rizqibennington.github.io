@@ -25,6 +25,7 @@ const Navigation = () => {
     { href: '#services-section', label: 'Services' },
     { href: '#skills-section', label: 'Skills' },
     { href: '#projects-section', label: 'Projects' },
+    { href: '/apps', label: 'Apps' },
     { href: '#contact-section', label: 'Contact' },
   ];
 
@@ -71,8 +72,10 @@ const Navigation = () => {
                 href={item.href}
                 className="text-white hover:text-blue-400 transition-colors font-medium"
                 onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(item.href);
+                  if (item.href.startsWith('#')) {
+                    e.preventDefault();
+                    scrollToSection(item.href);
+                  }
                 }}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -121,8 +124,10 @@ const Navigation = () => {
                 href={item.href}
                 className="block text-white hover:text-blue-400 transition-colors py-2 px-4 rounded"
                 onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(item.href);
+                  if (item.href.startsWith('#')) {
+                    e.preventDefault();
+                    scrollToSection(item.href);
+                  }
                 }}
               >
                 {item.label}

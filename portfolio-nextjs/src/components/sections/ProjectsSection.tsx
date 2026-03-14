@@ -175,19 +175,12 @@ const ProjectsSection = () => {
           transition={{ duration: 0.6, delay: 1 }}
         >
           <motion.a
-            href="#contact-section"
+            href="/apps"
             className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-medium text-lg transition-colors inline-block"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={(e) => {
-              e.preventDefault();
-              document.querySelector('#contact-section')?.scrollIntoView({ 
-                behavior: 'smooth', 
-                block: 'start' 
-              });
-            }}
           >
-            Let&apos;s Work Together
+            Explore My Apps
           </motion.a>
         </motion.div>
       </div>
