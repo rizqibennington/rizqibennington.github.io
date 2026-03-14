@@ -18,9 +18,10 @@ jobs:
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
             # Sesuaikan path ini dengan lokasi folder project di VPS kamu
-            cd ~/rizqibennington
+            cd /home/ubuntu/rizqibennington
             
             # Pull perubahan terbaru
+            git config --global --add safe.directory /home/ubuntu/rizqibennington
             git pull origin master
             
             # Build ulang dan restart container (tanpa downtime lama)
