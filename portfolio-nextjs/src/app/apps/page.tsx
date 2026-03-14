@@ -22,6 +22,13 @@ const appsData: AppItem[] = [
     status: "Live",
     tags: ["Game", "Canvas", "Vite"],
   },
+  {
+    name: "YTClipper",
+    description: "Aplikasi web untuk membuat klip video YouTube menjadi format vertikal 9:16 berbasis heatmap “Most Replayed”, dengan opsi subtitle AI.",
+    path: "/apps/ytclip/",
+    status: "Live",
+    tags: ["FastAPI", "FFmpeg", "yt-dlp"],
+  },
 ];
 
 export default function AppsPage() {
