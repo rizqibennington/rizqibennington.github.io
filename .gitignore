@@ -1,0 +1,17 @@
+# GitHub Actions Key
+gh_actions_key
+gh_actions_key.pub
+
+# Next.js
+.next/
+out/
+node_modules/
+npm-debug.log
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
