@@ -5,7 +5,7 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   exit 1
 fi
 
-domains=(rizqibennington.com www.rizqibennington.com app.rizqibennington.com)
+domains=(rizqibennington.com www.rizqibennington.com)
 rsa_key_size=4096
 data_path="./certbot"
 email="rizqirahmansyah98@gmail.com" # Adding a valid email is important to avoid registering with an invalid email
