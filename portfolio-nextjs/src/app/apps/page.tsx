@@ -3,26 +3,34 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { getAppUrl } from "@/utils/url";
+import { useEffect, useState } from "react";
 
 type AppItem = {
   name: string;
   description: string;
-  href: string;
+  path: string; // Changed from href to path for dynamic calculation
   status: "Live" | "WIP";
   tags: string[];
 };
 
-const apps: AppItem[] = [
+const appsData: AppItem[] = [
   {
     name: "Turn-Based Battle Arena",
     description: "Gim strategi turn-based berbasis HTML5 Canvas untuk eksplorasi mekanik pertempuran dan game loop.",
-    href: "https://rizqibennington.com/turnbasedgame/",
+    path: "/turnbasedgame/",
     status: "Live",
     tags: ["Game", "Canvas", "Vite"],
   },
 ];
 
 export default function AppsPage() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#f8fafc] text-foreground dark:bg-background">
       <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(1000px_circle_at_10%_10%,rgba(59,130,246,0.35),transparent_60%),radial-gradient(800px_circle_at_90%_20%,rgba(168,85,247,0.30),transparent_60%),radial-gradient(800px_circle_at_50%_90%,rgba(34,197,94,0.25),transparent_60%)] dark:bg-[radial-gradient(900px_circle_at_10%_10%,rgba(59,130,246,0.22),transparent_55%),radial-gradient(700px_circle_at_90%_20%,rgba(168,85,247,0.18),transparent_55%),radial-gradient(700px_circle_at_50%_90%,rgba(34,197,94,0.12),transparent_55%)]" />
@@ -54,9 +62,9 @@ export default function AppsPage() {
         </motion.div>
 
         <div className="grid gap-6 md:grid-cols-2">
-          {apps.map((app, index) => (
+          {appsData.map((app, index) => (
             <motion.div
-              key={app.href}
+              key={app.path}
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
@@ -79,7 +87,7 @@ export default function AppsPage() {
                   <p className="mt-2 text-sm text-muted-foreground">{app.description}</p>
                 </div>
                 <a
-                  href={app.href}
+                  href={mounted ? getAppUrl(app.path) : '#'}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border/60 bg-muted/40 text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-colors"
