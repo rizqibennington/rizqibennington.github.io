@@ -21,11 +21,12 @@ const ProjectsSection = () => {
       openInNewTab: true
     },
     {
-      title: 'Sistem Informasi Komite Etik dan Hukum Dharmais',
-      subtitle: 'SIKETIK',
-      image: '/images/siketik.png',
-      description: 'Ethics and Legal Committee Information System for hospital management.',
-      link: '#'
+      title: 'Patient Registration Website',
+      subtitle: 'RS Nasional Kanker Dharmais',
+      image: '/images/pendaftaran-dharmais.png',
+      description: 'Online patient registration website for RS Nasional Kanker Dharmais.',
+      link: 'https://www.rskdharmais.go.id/',
+      openInNewTab: true
     },
     {
       title: 'Indeks Saham',
@@ -40,23 +41,13 @@ const ProjectsSection = () => {
       subtitle: 'Katadata Pemilu 2024',
       image: '/images/analisis-sentimen.png',
       description: 'Sentiment analysis platform for 2024 presidential election debates.',
-      link: '#'
-    },
-    {
-      title: 'Career Development Center BPSDMI',
-      subtitle: 'TopKarir x Kemenperin',
-      image: '/images/bpsdmi.png',
-      description: 'Career development platform for industrial workforce.',
-      link: '#'
-    },
-    {
-      title: 'Jabar Jawara Career Center',
-      subtitle: 'Disnakertrans Jabar X TopKarir',
-      image: '/images/jabarjawara.png',
-      description: 'West Java career center platform for job seekers and employers.',
-      link: '#'
+      link: 'https://katadata.co.id/',
+      openInNewTab: true
     }
   ];
+
+  const lgColumns = projects.length <= 4 ? 2 : 3;
+  const lgRemainder = lgColumns === 3 ? projects.length % 3 : projects.length % 2;
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -94,15 +85,23 @@ const ProjectsSection = () => {
 
         {/* Projects Grid */}
         <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className={`grid gap-8 md:grid-cols-2 ${lgColumns === 2 ? 'lg:grid-cols-2' : 'lg:grid-cols-3'}`}
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
         >
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <motion.div
               key={project.title}
-              className="group relative overflow-hidden rounded-lg shadow-lg bg-white dark:bg-gray-900"
+              className={`group relative w-full overflow-hidden rounded-lg shadow-lg bg-white dark:bg-gray-900 ${
+                lgColumns === 3 && lgRemainder === 1 && index === projects.length - 1
+                  ? 'lg:col-span-3 lg:max-w-[520px] lg:justify-self-center'
+                  : ''
+              } ${
+                lgColumns === 3 && lgRemainder === 2 && index === projects.length - 2
+                  ? 'lg:col-start-2'
+                  : ''
+              }`}
               variants={itemVariants}
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
