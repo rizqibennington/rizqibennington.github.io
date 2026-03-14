@@ -25,4 +25,8 @@ jobs:
             git pull origin master
             
             # Build ulang dan restart container (tanpa downtime lama)
-            docker compose up -d --build
+            docker compose up -d --build web
+            docker compose up -d certbot
+            if [ -f ./ytclip/Dockerfile ]; then
+              docker compose up -d --build ytclip
+            fi
