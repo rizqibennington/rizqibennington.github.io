@@ -6,6 +6,7 @@ Welcome, AI Agent! This document serves as the **source of truth** for this proj
 **Rizqi Rahmansyah's Portfolio Website**
 - **Domain:** `https://rizqibennington.com` (VPS) & `https://rizqibennington.github.io` (GitHub Pages backup)
 - **Stack:** Next.js 15 (App Router), TypeScript, Tailwind CSS, Framer Motion.
+- **Features:** Dark Mode, SEO Optimized (Open Graph), Responsive.
 - **Deployment:** Docker (VPS) & GitHub Actions (Auto-Deploy).
 
 ---
@@ -50,6 +51,7 @@ There are two active workflows in GitHub Actions:
 - **Images:** Place in `portfolio-nextjs/public/images/`.
 - **Styling:** Use Tailwind CSS classes. Global styles in `globals.css`.
 - **Icons:** Use `lucide-react`.
+- **Theme:** Uses `next-themes` for Dark/Light mode. Styling supports `.dark` variant.
 
 ### 2. Running Locally
 ```bash
