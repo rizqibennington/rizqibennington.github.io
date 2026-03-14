@@ -13,38 +13,38 @@ const ExperienceSection = () => {
     {
       period: "2014 - 2017",
       title: "SMAN 2 Tambun Selatan",
-      position: "Highschool of Science",
-      description: "The first experience when I'm falling in love with IT Things."
+      position: "High School of Science",
+      description: "My first encounter with the world of IT, where my passion for technology began."
     },
     {
       period: "2017 - 2021",
       title: "University of Singaperbangsa Karawang",
-      position: "Bachelor's Degree of Computer Science",
-      description: "My first step to begin my journey to be a developer. I started my coding journey here and graduated with a cum laude predicate with a GPA of 3.71."
+      position: "Bachelor's Degree in Computer Science",
+      description: "My first step in becoming a developer. I started my coding journey here and graduated cum laude with a GPA of 3.71."
     },
     {
       period: "January - June (2020)",
       title: "PT Telekomunikasi Indonesia (WITEL Karawang)",
-      position: "Chatbot Developer",
-      description: "My first working experience as an intern. Here, I developed a chatbot on Telegram to analyze, monitor, and count the jobs already done by technicians."
+      position: "Chatbot Developer Intern",
+      description: "My first professional experience as an intern. I developed a Telegram chatbot to analyze, monitor, and track technicians' completed tasks."
     },
     {
       period: "January 2022 - February 2023",
       title: "Topkarir Indonesia",
       position: "Fullstack Web Developer",
-      description: "My first Working Experience in the professional field was in Topkarir, a startup company in Human Resource field, in this place my responsibility is Develop and Maintenance Website, Frontend, Backend, API and connect to third party API for Topkarir Website and Microsite there are Jaknaker.id, Jatimcerdas, jabarjawara, TopKarir, AUA Topkarir, CDC BPSDMI. Topkarir. often using MySQL and PostgreSQL ,PHP, Javascript, Jquery, CSS, HTML and GO. often using framework Codeigniter and Laravel"
+      description: "My first full-time professional role at a Human Resources startup. I was responsible for developing and maintaining the main website and microsites, including Jaknaker.id, Jatimcerdas, Jabarjawara, TopKarir, AUA Topkarir, and CDC BPSDMI. My work involved Frontend, Backend, and API integration using MySQL, PostgreSQL, PHP, JavaScript, jQuery, CSS, HTML, Go, CodeIgniter, and Laravel."
     },
     {
       period: "March 2023 - March 2024",
       title: "Katadata Indonesia",
       position: "Web Developer",
-      description: "Responsible for developing, maintaining, and testing the Katadata website, API, and client-side applications using frameworks like Laravel, CodeIgniter, and React JS, with programming languages such as PHP and JavaScript. Also involved in data scraping using Python to support the data engineering team. Katadata is a startup in the online media industry."
+      description: "Responsible for developing, maintaining, and testing the Katadata website, APIs, and client-side applications using Laravel, CodeIgniter, React.js, PHP, and JavaScript. I also contributed to data scraping efforts using Python to support the data engineering team at this online media startup."
     },
     {
-      period: "July 2024 - Now",
+      period: "July 2024 - Present",
       title: "RS Nasional Kanker Dharmais",
       position: "Programmer",
-      description: "Developed and maintained hospital management software, optimizing workflows and enhancing patient data management. Collaborated with medical staff to create custom applications for scheduling, electronic medical records (EMR), and reporting tools. Ensured data security and compliance with health regulations by implementing robust cybersecurity measures. Improved system performance and user experience through continuous code optimization and feature updates."
+      description: "Developing and maintaining hospital management software to optimize workflows and enhance patient data management. Collaborating with medical staff to create custom applications for scheduling, Electronic Medical Records (EMR), and reporting tools. Ensuring data security and compliance with health regulations through robust cybersecurity measures, while improving system performance and user experience via continuous code optimization."
     }
   ];
 

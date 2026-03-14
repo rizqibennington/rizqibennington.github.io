@@ -52,7 +52,7 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              A Web Developer Enthusiast
+              Full Stack Developer
             </motion.h2>
             
             <motion.div
@@ -69,7 +69,7 @@ const HeroSection = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Hire me
+                Hire Me
               </motion.a>
               
               <motion.button

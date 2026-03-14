@@ -35,8 +35,8 @@ const ServicesSection = () => {
     },
     {
       icon: BarChart3,
-      title: 'App Developing',
-      description: 'Mobile and web application development with focus on user experience.'
+      title: 'App Development',
+      description: 'Mobile and web application development with a focus on user experience.'
     },
     {
       icon: Palette,
@@ -82,7 +82,7 @@ const ServicesSection = () => {
           <h1 className="text-6xl font-bold text-gray-200 mb-2">Services</h1>
           <h2 className="text-3xl font-bold text-gray-800 -mt-8 relative z-10">Services</h2>
           <p className="text-gray-600 mt-4 text-lg max-w-2xl mx-auto">
-            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia
+            Delivering high-quality digital solutions tailored to your needs.
           </p>
         </motion.div>
 

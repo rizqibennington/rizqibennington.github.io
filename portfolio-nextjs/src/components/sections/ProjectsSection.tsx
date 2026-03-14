@@ -89,7 +89,7 @@ const ProjectsSection = () => {
         >
           <h1 className="text-6xl font-bold text-gray-200 mb-2">Projects</h1>
           <h2 className="text-3xl font-bold text-gray-800 -mt-8 relative z-10">My Projects</h2>
-          <p className="text-gray-600 mt-4 text-lg">Here&apos;s Some of My Project that already done</p>
+          <p className="text-gray-600 mt-4 text-lg">Here are some of the projects I have completed</p>
         </motion.div>
 
         {/* Projects Grid */}

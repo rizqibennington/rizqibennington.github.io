@@ -111,10 +111,7 @@ const AboutSection = () => {
               className="text-gray-600 leading-relaxed text-lg"
               variants={itemVariants}
             >
-              My journey into web development started with a fascination for how the web works,
-              leading me to master technologies like HTML, CSS, JavaScript, and frameworks such as
-              React and Angular on the front end. On the server side, I&apos;m skilled in PHP, Node.js,
-              and MySQL, with a particular focus on building scalable and secure web applications.
+              My journey into web development began with a fascination for how the web works, leading me to master technologies like HTML, CSS, JavaScript, and frameworks such as React and Angular on the frontend. On the server side, I am skilled in PHP, Node.js, and MySQL, with a particular focus on building scalable and secure web applications.
             </motion.p>
 
             <motion.ul
