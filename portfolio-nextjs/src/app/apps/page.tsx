@@ -16,7 +16,7 @@ const apps: AppItem[] = [
   {
     name: "Turn-Based Battle Arena",
     description: "Gim strategi turn-based berbasis HTML5 Canvas untuk eksplorasi mekanik pertempuran dan game loop.",
-    href: "https://app.rizqibennington.com/turnBasedGame/",
+    href: "https://rizqibennington.com/turnbasedgame/",
     status: "Live",
     tags: ["Game", "Canvas", "Vite"],
   },
