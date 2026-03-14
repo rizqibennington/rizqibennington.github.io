@@ -32,7 +32,8 @@ const ProjectsSection = () => {
       subtitle: 'Databoks Katadata',
       image: '/images/marketdata.png',
       description: 'Stock market index tracking and analysis platform.',
-      link: '#'
+      link: 'https://databoks.katadata.co.id/infografik',
+      openInNewTab: true
     },
     {
       title: 'Analisis Sentimen Debat Pilpres 2024',
