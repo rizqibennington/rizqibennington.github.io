@@ -78,7 +78,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/images/aboutme.png" type="image/png" />
       </head>
-      <body className={`${poppins.variable} font-poppins antialiased`}>
+      <body suppressHydrationWarning className={`${poppins.variable} font-poppins antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

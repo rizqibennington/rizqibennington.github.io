@@ -68,7 +68,7 @@ const ExperienceSection = () => {
   };
 
   return (
-    <section id="resume-section" className="py-20 bg-white" ref={ref}>
+    <section id="resume-section" className="py-20 bg-white dark:bg-gray-950" ref={ref}>
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -77,9 +77,9 @@ const ExperienceSection = () => {
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-6xl font-bold text-gray-200 mb-2">Life Experience</h1>
-          <h2 className="text-3xl font-bold text-gray-800 -mt-8 relative z-10">Life Experience</h2>
-          <p className="text-gray-600 mt-4 text-lg">Experience is the most valuable lesson from God</p>
+          <h1 className="text-6xl font-bold text-gray-200 dark:text-gray-800 mb-2">Life Experience</h1>
+          <h2 className="text-3xl font-bold text-gray-800 dark:text-white -mt-8 relative z-10">Life Experience</h2>
+          <p className="text-gray-600 dark:text-gray-300 mt-4 text-lg">Experience is the most valuable lesson from God</p>
         </motion.div>
 
         {/* Timeline */}
@@ -96,7 +96,7 @@ const ExperienceSection = () => {
               variants={itemVariants}
             >
               <motion.div
-                className="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="bg-gray-50 dark:bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.3 }}
               >
@@ -109,9 +109,9 @@ const ExperienceSection = () => {
                   {exp.period}
                 </motion.span>
                 
-                <h3 className="text-xl font-bold text-gray-800 mb-2">{exp.title}</h3>
+                <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">{exp.title}</h3>
                 <h4 className="text-blue-600 font-semibold mb-3">{exp.position}</h4>
-                <p className="text-gray-600 leading-relaxed">{exp.description}</p>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{exp.description}</p>
               </motion.div>
             </motion.div>
           ))}

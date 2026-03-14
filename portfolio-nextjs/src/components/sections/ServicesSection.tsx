@@ -70,7 +70,7 @@ const ServicesSection = () => {
   };
 
   return (
-    <section id="services-section" className="py-20 bg-white" ref={ref}>
+    <section id="services-section" className="py-20 bg-white dark:bg-gray-950" ref={ref}>
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -79,9 +79,9 @@ const ServicesSection = () => {
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-6xl font-bold text-gray-200 mb-2">Services</h1>
-          <h2 className="text-3xl font-bold text-gray-800 -mt-8 relative z-10">Services</h2>
-          <p className="text-gray-600 mt-4 text-lg max-w-2xl mx-auto">
+          <h1 className="text-6xl font-bold text-gray-200 dark:text-gray-800 mb-2">Services</h1>
+          <h2 className="text-3xl font-bold text-gray-800 dark:text-white -mt-8 relative z-10">Services</h2>
+          <p className="text-gray-600 dark:text-gray-300 mt-4 text-lg max-w-2xl mx-auto">
             Delivering high-quality digital solutions tailored to your needs.
           </p>
         </motion.div>
@@ -103,7 +103,7 @@ const ServicesSection = () => {
                 variants={itemVariants}
               >
                 <motion.div
-                  className="bg-gray-50 hover:bg-blue-50 p-8 rounded-lg text-center transition-all duration-300 cursor-pointer h-full"
+                  className="bg-gray-50 hover:bg-blue-50 dark:bg-gray-900/60 dark:hover:bg-gray-900 p-8 rounded-lg text-center transition-all duration-300 cursor-pointer h-full"
                   whileHover={{ 
                     y: -10,
                     boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
@@ -111,7 +111,7 @@ const ServicesSection = () => {
                   transition={{ duration: 0.3 }}
                 >
                   <motion.div
-                    className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 group-hover:bg-blue-200 rounded-full mb-6 transition-colors duration-300"
+                    className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 group-hover:bg-blue-200 dark:bg-blue-900/40 dark:group-hover:bg-blue-900/60 rounded-full mb-6 transition-colors duration-300"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ duration: 0.3 }}
                   >
@@ -121,11 +121,11 @@ const ServicesSection = () => {
                     />
                   </motion.div>
                   
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4 group-hover:text-blue-700 transition-colors duration-300">
+                  <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 group-hover:text-blue-700 transition-colors duration-300">
                     {service.title}
                   </h3>
                   
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                     {service.description}
                   </p>
                 </motion.div>

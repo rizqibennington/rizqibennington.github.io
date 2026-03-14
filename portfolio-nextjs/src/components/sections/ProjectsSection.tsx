@@ -78,7 +78,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects-section" className="py-20 bg-gray-50" ref={ref}>
+    <section id="projects-section" className="py-20 bg-gray-50 dark:bg-gray-950" ref={ref}>
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -87,9 +87,9 @@ const ProjectsSection = () => {
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-6xl font-bold text-gray-200 mb-2">Projects</h1>
-          <h2 className="text-3xl font-bold text-gray-800 -mt-8 relative z-10">My Projects</h2>
-          <p className="text-gray-600 mt-4 text-lg">Here are some of the projects I have completed</p>
+          <h1 className="text-6xl font-bold text-gray-200 dark:text-gray-800 mb-2">Projects</h1>
+          <h2 className="text-3xl font-bold text-gray-800 dark:text-white -mt-8 relative z-10">My Projects</h2>
+          <p className="text-gray-600 dark:text-gray-300 mt-4 text-lg">Here are some of the projects I have completed</p>
         </motion.div>
 
         {/* Projects Grid */}
@@ -102,7 +102,7 @@ const ProjectsSection = () => {
           {projects.map((project) => (
             <motion.div
               key={project.title}
-              className="group relative overflow-hidden rounded-lg shadow-lg bg-white"
+              className="group relative overflow-hidden rounded-lg shadow-lg bg-white dark:bg-gray-900"
               variants={itemVariants}
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
@@ -145,13 +145,13 @@ const ProjectsSection = () => {
               
               {/* Content (visible on mobile) */}
               <div className="p-6 md:hidden">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">
                   {project.title}
                 </h3>
                 <p className="text-sm text-blue-600 mb-2">
                   {project.subtitle}
                 </p>
-                <p className="text-gray-600 text-sm mb-4">
+                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
                   {project.description}
                 </p>
                 <a

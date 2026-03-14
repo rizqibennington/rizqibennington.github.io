@@ -51,7 +51,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact-section" className="py-20 bg-white" ref={ref}>
+    <section id="contact-section" className="py-20 bg-white dark:bg-gray-950" ref={ref}>
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -60,9 +60,9 @@ const ContactSection = () => {
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-6xl font-bold text-gray-200 mb-2">Contact</h1>
-          <h2 className="text-3xl font-bold text-gray-800 -mt-8 relative z-10">Contact Me</h2>
-          <p className="text-gray-600 mt-4 text-lg">Need some help with your website? feel free to contact me! :)</p>
+          <h1 className="text-6xl font-bold text-gray-200 dark:text-gray-800 mb-2">Contact</h1>
+          <h2 className="text-3xl font-bold text-gray-800 dark:text-white -mt-8 relative z-10">Contact Me</h2>
+          <p className="text-gray-600 dark:text-gray-300 mt-4 text-lg">Need some help with your website? feel free to contact me! :)</p>
         </motion.div>
 
         {/* Contact Info Cards */}
@@ -82,19 +82,19 @@ const ContactSection = () => {
                 variants={itemVariants}
               >
                 <motion.div
-                  className="bg-gray-50 hover:bg-blue-50 p-8 rounded-lg transition-all duration-300"
+                  className="bg-gray-50 hover:bg-blue-50 dark:bg-gray-900/60 dark:hover:bg-gray-900 p-8 rounded-lg transition-all duration-300"
                   whileHover={{ y: -5, boxShadow: "0 10px 30px rgba(0,0,0,0.1)" }}
                   transition={{ duration: 0.3 }}
                 >
                   <motion.div
-                    className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6"
+                    className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 dark:bg-blue-900/40 rounded-full mb-6"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ duration: 0.3 }}
                   >
                     <IconComponent size={32} className="text-blue-600" />
                   </motion.div>
                   
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                  <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">
                     {info.title}
                   </h3>
                   
@@ -109,7 +109,7 @@ const ContactSection = () => {
                       {info.content}
                     </motion.a>
                   ) : (
-                    <p className="text-gray-600">{info.content}</p>
+                    <p className="text-gray-600 dark:text-gray-300">{info.content}</p>
                   )}
                 </motion.div>
               </motion.div>

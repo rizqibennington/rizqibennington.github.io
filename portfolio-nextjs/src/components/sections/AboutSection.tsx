@@ -55,7 +55,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section id="about-section" className="py-20 bg-gray-50" ref={ref}>
+    <section id="about-section" className="py-20 bg-gray-50 dark:bg-gray-950" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
           className="grid md:grid-cols-2 gap-12 items-center"
@@ -94,13 +94,13 @@ const AboutSection = () => {
           >
             <div>
               <motion.h1
-                className="text-6xl font-bold text-gray-200 mb-2"
+                className="text-6xl font-bold text-gray-200 dark:text-gray-800 mb-2"
                 variants={itemVariants}
               >
                 About
               </motion.h1>
               <motion.h2
-                className="text-3xl font-bold text-gray-800 -mt-8 relative z-10"
+                className="text-3xl font-bold text-gray-800 dark:text-white -mt-8 relative z-10"
                 variants={itemVariants}
               >
                 About Me
@@ -108,7 +108,7 @@ const AboutSection = () => {
             </div>
 
             <motion.p
-              className="text-gray-600 leading-relaxed text-lg"
+              className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg"
               variants={itemVariants}
             >
               My journey into web development began with a fascination for how the web works, leading me to master technologies like HTML, CSS, JavaScript, and frameworks such as React and Angular on the frontend. On the server side, I am skilled in PHP, Node.js, and MySQL, with a particular focus on building scalable and secure web applications.
@@ -126,7 +126,7 @@ const AboutSection = () => {
               ].map((item, index) => (
                 <motion.li
                   key={index}
-                  className="flex text-gray-700"
+                  className="flex text-gray-700 dark:text-gray-300"
                   variants={itemVariants}
                 >
                   <span className="font-semibold w-32">{item.label}</span>
@@ -137,7 +137,7 @@ const AboutSection = () => {
 
             {/* Counter */}
             <motion.div
-              className="bg-white p-6 rounded-lg shadow-lg"
+              className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg"
               variants={itemVariants}
             >
               <div className="text-center">
@@ -149,7 +149,7 @@ const AboutSection = () => {
                 >
                   {workingDays}
                 </motion.div>
-                <div className="text-gray-600 font-medium">Days Working Experience</div>
+                <div className="text-gray-600 dark:text-gray-300 font-medium">Days Working Experience</div>
               </div>
               
               <motion.div
