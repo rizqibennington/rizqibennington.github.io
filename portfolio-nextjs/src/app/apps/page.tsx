@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 type AppItem = {
   name: string;
   description: string;
-  path: string; // Changed from href to path for dynamic calculation
+  path: string;
   status: "Live" | "WIP";
   tags: string[];
 };
@@ -18,7 +18,7 @@ const appsData: AppItem[] = [
   {
     name: "Turn-Based Battle Arena",
     description: "Gim strategi turn-based berbasis HTML5 Canvas untuk eksplorasi mekanik pertempuran dan game loop.",
-    path: "/turnbasedgame/",
+    path: "/apps/turnbasedgame/",
     status: "Live",
     tags: ["Game", "Canvas", "Vite"],
   },
